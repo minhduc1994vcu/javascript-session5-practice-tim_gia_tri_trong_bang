@@ -8,17 +8,18 @@
 <script>
     let value = parseInt(prompt('enter a number which you want to check'));
     let x = [0, 2, 4, 6, 8, 10];
-    let i =0;
-    while (i < x.length) {
+    let i = 0;
+    let index = 0;
+    let check = false;
+    for (i = 0; i < x.length; i++) {
         if (value === x[i]) {
-            alert("number " + value + " founded at " + i);
-            break;
+            index = i;
+            check = true;
         }
-       i++
     }
-    if (value !== x[i]) {
-        alert("number " + value + "was not found");
-    }
+    if (check === true) {
+        alert("Value " + value + " found at " + index);
+    } else alert("Value was not found")
 </script>
 </body>
 </html>
